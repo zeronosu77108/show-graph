@@ -125,12 +125,14 @@ function draw() {
 
 
 window.onload = function() {
-  const colorContainer = document.getElementById('color-buttons');
-  for (let i = 0; i < COLORS.length; i++) {
-    const colorButton = document.createElement('button');
-    colorButton.className = "color-button";
-    colorButton.onclick = function() { changeColor(i); };
-    colorButton.style.backgroundColor = COLORS[i];
-    colorContainer.appendChild(colorButton);
-  }
+    const colorContainer = document.getElementById('color-buttons');
+    for (let i = 0; i < COLORS.length; i++) {
+        const colorButton = document.createElement('button');
+        colorButton.className = "color-button";
+        colorButton.onclick = function() { changeColor(i); };
+        colorButton.style.backgroundColor = COLORS[i];
+        colorContainer.appendChild(colorButton);
+    }
+    const container = document.getElementById('cy');
+    container.style.height = String(Math.max(400, window.innerHeight * 0.5)) + 'px';
 }

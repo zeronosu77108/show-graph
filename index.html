@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>グラフ可視化</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.14.0/cytoscape.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>グラフ可視化ツール</h1>
+    <ul>
+        <li>頂点や辺をクリックした後に下の丸ボタンを押すと色を変えることができます。
+        <li>重みつきの場合は、辺の重みを最後に書けば自動で判定してくれます。※混在しているとバグります。
+        <li>m は省略できます。省略した場合は入力した辺を全て描画します。
+    </ul>
+    
+    <div id="controles">
+        <textarea id="input" rows="10" cols="30" placeholder="n [m]&#10;u_1 v_1 [w_1]&#10;&#xFE19;&#10;u_m v_m [w_m]"></textarea>
+        <button id="directedButton" onclick="toggleDirected()">Undirected</button>
+        <button onclick="draw()">Draw</button>
+    </div>
+    
+    <div id="message"></div>
+    
+    
+    <div id="cy"></div>
+    <div id="color-buttons"></div>
+    
+</body>
+</html>
